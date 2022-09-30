@@ -9,27 +9,21 @@ $secret = "8237d140-6f14-4d7c-aba7-86ead78b146b";
 
 $login_url ="https://login.microsoftonline.com/".$tennantid."/oauth2/v2.0/authorize";
 
-
 session_start ();
-
 $_SESSION['state']=session_id();
 
 
-
-
-if (isset ($_SESSION['msatg'])){
+if ($_SESSION['msatg']){
 
    
 
-   
 
-   
-
+    
 
    
    header ('Location: big15.php');
    
-
+   
 
 } //end if session
 
@@ -128,6 +122,8 @@ if ($_GET['action'] == 'logout'){
    session_destroy();
 
 }
+
+
 ?>
 
 <!DOCTYPE html>

@@ -369,6 +369,15 @@ h4 {
     background-image: url(../img/header.jpg)
 }
 
+
+.boton-spanish{
+
+
+margin-bottom: -100px;
+
+
+}
+
 .webp .inicio {
     background-image: url(../img/header.webp);
     margin-top: 10;
@@ -431,10 +440,11 @@ thead {
 
 .derecha .dark-mode-boton {
     filter: invert(100%);
-    margin-bottom: 2rem;
-    margin-top: 3rem;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    margin-left: 1rem;
    
-    margin-right: 8rem;
+    margin-right: 1rem;
     width: 3rem
 }
 
@@ -796,9 +806,11 @@ thead {
 }
 .logometro{
 
-    
+    height: 100;
+    width: 100;
     margin-bottom: -80px;
-    padding-right: 90rem;
+    margin-right: 645px;
+   
   
 
 

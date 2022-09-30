@@ -1,21 +1,18 @@
 <?php
-session_start ();
+
+
+ session_start ();
+
+
 error_reporting(0);
-$varsession = $_SESSION ['state'];
+$varsession = $_SESSION["uname"];
 if($varsession == null || $varsession=''){
 echo'No tienes acceso';
 
 die();
 }
 
-
-
-
-
-
-
-
-if (isset($_GET['action']) == 'logout'){
+if ($_GET['action'] == 'logout'){
 
   unset ($_SESSION['msatg']);
 
@@ -91,7 +88,10 @@ if (isset($_GET['action']) == 'logout'){
       height: 100%;
     }
   </style>
+  <ul class="nav  nav-pills">
 
+<li class="boton-spanish"><a href="big15ESP.php">Spanish 2022 / 2023</a></li>
+</ul>
 </head>
 
 
@@ -103,11 +103,8 @@ if (isset($_GET['action']) == 'logout'){
       <div class="barra">
         
       <button class="btn btn-sm btn-primary tour-step1 tour-step18" id="initialize-tour"> Start your tour! </button>
-      <ul class="nav  nav-pills">
-        
 
-<li><a href="big15ESP.php">Spanish 2022 / 2023</a></li>
-</ul>
+      
           <img class= "logometro" src="build\img\metropolitan-touring-logo-menu.svg" alt="logo de metro">
           
 
@@ -135,8 +132,10 @@ if (isset($_GET['action']) == 'logout'){
 
   </header>
 
+
+
   <body class="nav-md" onload=”closeMe();self.focus()”>
-    <div class="body" style="margin: 2%">
+    <div class="body" style="margin:  2%">
       <!-- Main container -->
 
       <!--<a id="" class="tour-button" href="#">START TOUR</a>-->
@@ -146,7 +145,7 @@ if (isset($_GET['action']) == 'logout'){
           
            
           </p>
-         
+       
           <div class="tab-content">
             <!-- TABS -->
 

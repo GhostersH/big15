@@ -7,8 +7,8 @@ echo'No tienes acceso';
 
 die();
 }
-echo '<p><a href="?action=logout">Logout</a></p>';
-if ($_GET['action'] == 'logout'){
+
+if (isset($_GET['action']) == 'logout'){
 
   unset ($_SESSION['msatg']);
 
@@ -110,8 +110,7 @@ if ($_GET['action'] == 'logout'){
 
 
       </div>
-      <h1>Bienvenido a Galapagos Big15 Cheat Sheet, ! </h1>
-      <h2> HOLA! <?php echo $_SESSION["uname"]; ?> </h2> 
+   <h1>Welcome to Galapagos Big15 Cheat Sheet, <?php echo $_SESSION["uname"]; ?> ! </h1>
     </div>
 
   </header>
