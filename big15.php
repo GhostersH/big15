@@ -7,7 +7,6 @@ echo'No tienes acceso';
 
 die();
 }
-echo '<p><a href="?action=logout">Log Out</a></p>';
 
 
 
@@ -102,27 +101,36 @@ if (isset($_GET['action']) == 'logout'){
     <div class="contenedor contenido-header">
 
       <div class="barra">
-        <a href="#">
+        
+      <button class="btn btn-sm btn-primary tour-step1 tour-step18" id="initialize-tour"> Start your tour! </button>
+      <ul class="nav  nav-pills">
+        
 
-          <img src="build\img\metropolitan-touring-logo-menu.svg" alt="logo de metro" width="100" height="100">
+<li><a href="big15ESP.php">Spanish 2022 / 2023</a></li>
+</ul>
+          <img class= "logometro" src="build\img\metropolitan-touring-logo-menu.svg" alt="logo de metro">
+          
 
-        </a>
+        
         <div class="mobile-menu">
-
 
 
         </div>
         <div class="derecha">
+          
           <img class="dark-mode-boton" src="build/img/dark-mode.svg" alt="">
+          
         </div>
+     
+      
 
 
 
+        
 
       </div>
-      <h1>Welcome to Galapagos Big15 Cheat Sheet, ! </h1>
-     <h2> HI! <?php echo $_SESSION["uname"]; ?> </h2> 
-     
+      <h1>Welcome to Galapagos Big15 Cheat Sheet, <?php echo $_SESSION["uname"]; ?> ! </h1>
+      
     </div>
 
   </header>
@@ -136,12 +144,9 @@ if (isset($_GET['action']) == 'logout'){
       <div class="front_container" id="front_container">
         <div class="" role="main" id="front_content">
           
-            <button class="btn btn-sm btn-primary tour-step1 tour-step18" id="initialize-tour"> Start your tour! </button>
+           
           </p>
-          <ul class="nav  nav-pills">
-
-            <li><a href="big15ESP.php">Spanish 2022 / 2023</a></li>
-          </ul>
+         
           <div class="tab-content">
             <!-- TABS -->
 
@@ -4088,13 +4093,13 @@ if (isset($_GET['action']) == 'logout'){
         }
       </script>
 
-
+<p class="copyright"><a href="?action=logout">Logout</a></p>';
 
       <footer class="footer seccion">
-
-
-
-        <p class="copyright">Todos los derechos reservados <?php echo date('Y'); ?> &copy;</p>
+      
+        <p class="copyright">Todos los derechos reservados <?php echo date('Y'); ?> &copy;
+         
+      </p>
       </footer>
 
       <script src="build/js/bundle.min.js"></script>

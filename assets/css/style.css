@@ -59,7 +59,7 @@ html {
 
 h1, h2, h3, h4, h5, h6 {
   margin: 10px 0;
-  font-weight: 600;
+  font-weight: 6200;
   font-family: "Mukta", sans-serif;
 }
 
@@ -198,11 +198,7 @@ code {
   -webkit-animation: spin 3.45s infinite;
   -moz-animation: spin 3.45s infinite;
 }
-.a {
-text-align: center;
 
-
-}
 .spinner:after {
   content: '';
   position: absolute;
@@ -3059,4 +3055,6 @@ File: Responsive
     padding-top: 45px;
   }
 }
+
+
 /*# sourceMappingURL=style.css.map */

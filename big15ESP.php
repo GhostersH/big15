@@ -7,7 +7,7 @@ echo'No tienes acceso';
 
 die();
 }
-echo '<p><a href="?action=logout">Log Out</a></p>';
+echo '<p><a href="?action=logout">Logout</a></p>';
 if ($_GET['action'] == 'logout'){
 
   unset ($_SESSION['msatg']);
