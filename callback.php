@@ -1,5 +1,5 @@
 <?php
-
+error_reporting(0);
 
 $appid = "59085051-147f-4acf-a3e2-2da6f50496b2";
 
@@ -14,26 +14,26 @@ session_start ();
 
 $_SESSION['state']=session_id();
 
-echo "<h1>MICROSOFT LOGIN PHP/METROPOLITAN TOURING</h1><br>";
+
 
 
 if (isset ($_SESSION['msatg'])){
 
-   echo "<h2>Authenticated ".$_SESSION["uname"]." </h2><br> ";
-
-   
-echo 'PRUEBA ';
    
 
+   
 
-   echo '<p><a href="?action=logout">Log Out</a></p>';
+   
+
+
+   
    header ('Location: big15.php');
    
 
 
 } //end if session
 
-else   echo '<h2><p>Por favor ingresa con tu cuenta de microsoft! <a href="?action=login">Log In</a></p></h2>';
+else   
 
 
 if ($_GET['action'] == 'login'){
@@ -93,7 +93,7 @@ $rez = json_decode (curl_exec ($ch), 1);
 
 if (array_key_exists ('error', $rez)){  
 
- var_dump ($rez['error']);    
+ 
 
  die();
 
@@ -128,3 +128,92 @@ if ($_GET['action'] == 'logout'){
    session_destroy();
 
 }
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+        <title>Big15 - Metropolitan-Toruing</title>
+        <meta content="Admin Dashboard" name="description" />
+        <meta content="ThemeDesign" name="author" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+        <link rel="shortcut icon" href="index_files/favico.ico">
+
+        <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+        <link href="assets/css/icons.css" rel="stylesheet" type="text/css">
+        <link href="assets/css/style.css" rel="stylesheet" type="text/css">
+
+    </head>
+
+
+    <body class="fixed-left">
+
+        <!-- Loader -->
+        <div id="preloader"><div id="status"><div class="spinner"></div></div></div>
+
+        <!-- Begin page -->
+        <div class="accountbg">
+            
+            <div class="content-center">
+                <div class="content-desc-center">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-5 col-md-8">
+                                <div class="card">
+                                    <div class="card-body">
+                
+                                        <h3 class="text-center mt-0 m-b-15">
+                                            <a href="callback.php" class="logo logo-admin"><img src="assets/images/galapagos-big-15-logo.jpg" height="100" alt="logo"></a>
+                                        </h3>
+                
+                                      
+                
+                                        <div class="p-2">
+                                            <form class="form-horizontal m-t-20" action="index.html">
+                
+                                                <div class="form-group text-center row m-t-20">
+                                                    <div class="col-12">
+                                                        <a href="?action=login"  type="submit"> <img src = "assets/images/ms-symbollockup_signin_light.svg"/> </a>
+                                                    </div>
+                                                </div>
+                
+                                                <div class="form-group text-center row m-t-20">
+                                                    <div class="col-12">
+                                                        <a href="https://account.live.com/password/reset?mkt=es-es" class="text-muted"><i class="mdi mdi-lock"></i> Forgot your password?</a>
+                                                    </div>
+                                                
+                                                </div>
+                                            </form>
+                                        </div>
+                
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end row -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- jQuery  -->
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/bootstrap.bundle.min.js"></script>
+        <script src="assets/js/modernizr.min.js"></script>
+        <script src="assets/js/detect.js"></script>
+        <script src="assets/js/fastclick.js"></script>
+        <script src="assets/js/jquery.slimscroll.js"></script>
+        <script src="assets/js/jquery.blockUI.js"></script>
+        <script src="assets/js/waves.js"></script>
+        <script src="assets/js/jquery.nicescroll.js"></script>
+        <script src="assets/js/jquery.scrollTo.min.js"></script>
+
+        <!-- App js -->
+        <script src="assets/js/app.js"></script>
+
+    </body>
+</html>

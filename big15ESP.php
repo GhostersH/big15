@@ -1,7 +1,6 @@
 <?php
-
 session_start ();
-
+error_reporting(0);
 $varsession = $_SESSION ['state'];
 if($varsession == null || $varsession=''){
 echo'No tienes acceso';
@@ -112,7 +111,7 @@ if ($_GET['action'] == 'logout'){
 
       </div>
       <h1>Bienvenido a Galapagos Big15 Cheat Sheet, ! </h1>
-      <h2> PRUEBA LOGIN: <?php echo $_SESSION["uname"]; ?> </h2> 
+      <h2> HOLA! <?php echo $_SESSION["uname"]; ?> </h2> 
     </div>
 
   </header>
