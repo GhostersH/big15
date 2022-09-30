@@ -1,0 +1,16 @@
+.boton-negro {
+
+@include boton($grisOscuro, inline-block);
+
+}
+
+.boton-negro-block {
+
+    @include boton($negro, block);
+    
+    }
+.boton-verde {
+
+
+    @include boton($verde, inline-block);
+}
